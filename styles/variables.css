@@ -2,7 +2,6 @@
 :root {
   --theme_background: url(../images/cover-image-dark.png);
   --background_color: rgba(0, 0, 40, 1);
-  --font: 'IBM Plex mono', monospace, sans-serif;
   --title_color: rgba(219, 0, 255, 1);
   --border_color: rgba(255, 0, 112, 1);
   --shadows_color: rgba(255, 0, 112, 1);

@@ -87,7 +87,6 @@ body {
   font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-style: bold;
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--shadows_color);
 }
@@ -128,9 +127,9 @@ button {
 }
 
 .header__theme-menu-button {
+  position: relative;
   border: 1px solid transparent;
   background: transparent;
-  position: relative;
 }
 
 .header__theme-menu-button_active {
@@ -165,8 +164,8 @@ button {
 }
 
 .section {
-  margin-bottom: 80px;
   margin-right: auto;
+  margin-bottom: 80px;
   margin-left: auto;
 }
 
@@ -200,7 +199,6 @@ button {
   font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  font-style: Bold;
   line-height: 23.4px;
 }
 
@@ -218,7 +216,6 @@ button {
   font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  font-style: Bold;
   line-height: 23.4px;
 }
 
@@ -242,6 +239,7 @@ button {
   gap: 20px;
   max-width: 984px;
 }
+
 .section__title__last {
   grid-row: 1 / 7;
   min-width: 315px;
@@ -249,7 +247,7 @@ button {
 
 .paragraph__link__style {
   position: relative;
-  color: var(--link-color);
+  color: var(--link_color);
   font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -279,7 +277,8 @@ button {
   outline: none;
 }
 .selection__wiew {
-  min-width: 649px;
+  /* min-width: 649px; */
+  width: 100%;
 }
 
 .selection__focus__wiew {
@@ -287,13 +286,14 @@ button {
 }
 
 .selection__concentration__wiew {
-  min-width: 649px;
+  /* min-width: 649px; */
+  width: 100%;
 }
 
 .section__images {
   max-width: 984px;
-  margin-bottom: 60px;
   margin-right: auto;
+  margin-bottom: 60px;
   margin-left: auto;
 }
 
@@ -330,7 +330,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 1024px;
+  width: 100%;
   min-height: 768px;
 }
 
@@ -339,7 +339,6 @@ button {
   font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 700;
   font-size: 157px;
-  font-style: Bold;
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--shadows_color_footer);
 }
@@ -352,15 +351,7 @@ button {
   margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-
- @media (max-width: 1023px) {
+@media (max-width: 1023px) {
   .section__focus {
     display: grid;
     grid-template-columns: 1fr;
@@ -374,10 +365,15 @@ button {
   }
 
   .section__concentration {
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  max-width: 472px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    max-width: 472px;
+  }
+
+  .section__last {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
@@ -395,22 +391,20 @@ button {
     max-width: 100%;
     padding: 0 16px;
   }
-.section__concentration {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
-  max-width: 355px;
-  width: 100%;
+  .section__concentration {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 355px;
   }
 
   .selection__concentration__wiew {
-    max-width: 355px;
     width: 100%;
-
+    max-width: 355px;
   }
 
-.section__title__concentration {
-  grid-row: 1;
-}
-
+  .section__title__concentration {
+    grid-row: 1;
+  }
 }
