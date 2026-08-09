@@ -1,8 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  min-width: 375px;
   max-width: 1024px;
-  height: 768px;
+  min-height: 100vh;
   background-color: var(--background_color);
 
   background-attachment: fixed;
@@ -19,7 +20,8 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  min-width: 1024px;
+  min-width: 375px;
+  max-width: 1024px;
   height: 100vh;
   min-height: 768px;
   margin-bottom: 60px;
@@ -53,10 +55,6 @@ body {
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--shadows_color);
   background-color: var(--text_color);
-}
-
-.footer {
-  position: relative;
 }
 
 .decorated-zone::after {
@@ -132,6 +130,7 @@ button {
 .header__theme-menu-button {
   border: 1px solid transparent;
   background: transparent;
+  position: relative;
 }
 
 .header__theme-menu-button_active {
@@ -140,10 +139,6 @@ button {
 
 .header__theme-menu-button:hover {
   border-color: var(--border_menu_color);
-}
-
-.header__theme-menu-button {
-  position: relative;
 }
 
 .header__theme-menu-button::after {
@@ -193,6 +188,7 @@ button {
   grid-template-rows: auto 1fr;
   gap: 20px;
 }
+
 .section__title__focus {
   grid-column: 1 / 4;
   grid-row: 1;
@@ -335,7 +331,6 @@ button {
   justify-content: center;
   align-items: center;
   min-width: 1024px;
-  min-height: 100vh;
   min-height: 768px;
 }
 
@@ -357,116 +352,65 @@ button {
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .page {
-    max-width: 100%;
-    height: auto;
-  }
 
-  .header {
-    width: 100%;
-    min-width: 375px;
-    min-height: clamp(668px, 90vh, 100%);
-    height: auto;
-    margin-bottom: 40px;
-  }
 
-  .header__title {
-    position: static;
-    width: 100%;
-    height: auto;
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-top: auto;
-  }
 
-  .header__subtitle {
-    position: static;
-    width: 100%;
-    font-size: clamp(14px, 1vw + 12px, 18px);
-    line-height: clamp(20px, 1.2vw + 16px, 24px);
-  }
 
-  .header__theme-menu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
 
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    gap: 10px;
-  }
 
-  .rec-indicator {
-    font-size: 14px;
-  }
 
-  .section {
-    margin-bottom: 40px;
-  }
 
-  .section__concentration,
+ @media (max-width: 1023px) {
   .section__focus {
+    display: grid;
     grid-template-columns: 1fr;
-    max-width: 100%;
+    grid-template-rows: auto;
+    gap: 20px;
   }
 
-  .section__title__concentration,
   .section__title__focus {
-    grid-row: auto;
-    grid-column: auto;
+    grid-column: 1 / 5;
+    grid-row: 1;
   }
 
-  .selection__concentration__wiew,
-  .selection__wiew {
-    min-width: 100%;
-  }
-
-  .section__last {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
-  .section__title__last {
-    grid-row: auto;
-  }
-
-  .section__images {
-    max-width: 100%;
-  }
-
-  .section__pictures {
-    grid-template-columns: 1fr;
-    min-width: 100%;
-  }
-
-  .section__pictures img:first-of-type,
-  .section__pictures img:nth-of-type(2),
-  .section__pictures img:nth-of-type(3),
-  .section__pictures img:nth-of-type(5) {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .footer {
-    min-width: auto;
-    width: 100%;
-    height: auto;
-    min-height: auto;
-  }
-
-  .footer__title {
-    font-size: clamp(2rem, 4vw + 1rem, 6rem);
-  }
-
-  .decorated-zone::after,
-  .decorated-zone::before {
-    display: none;
+  .section__concentration {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  max-width: 472px;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
+  .page {
+    width: 100%;
+  }
+  .section__title__focus {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    max-width: none;
+  }
+
+  .selection__focus__wiew {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+.section__concentration {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 355px;
+  width: 100%;
+  }
+
+  .selection__concentration__wiew {
+    max-width: 355px;
+    width: 100%;
+
+  }
+
+.section__title__concentration {
+  grid-row: 1;
+}
+
 }
