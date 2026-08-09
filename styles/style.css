@@ -35,7 +35,7 @@ body {
   top: 20px;
   right: 29px;
   padding-right: 20px;
-  font-family: 'IBM Plex mono', monospace, sans-serif;;
+  font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -100,7 +100,7 @@ body {
   height: auto;
   opacity: 1;
   color: var(--title_paragraph_color);
-  font-family: 'IBM Plex mono', monospace, sans-serif;
+  font-family: "IBM Plex mono", monospace, sans-serif;
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -347,20 +347,15 @@ button {
   font-style: Bold;
   line-height: 83%;
   text-shadow: 2px 2px 0 var(--shadows_color_footer);
-  
 }
 
 .section__text_size {
   min-width: 315px;
-
 }
 
 .title__margin {
   margin-bottom: 20px;
 }
-
-
-
 
 @media (max-width: 768px) {
   .page {
@@ -473,7 +468,5 @@ button {
   }
 }
 
-
 @media (max-width: 375px) {
- 
 }
