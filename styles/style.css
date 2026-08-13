@@ -41,7 +41,7 @@
   justify-self: end;
   align-self: start;
   box-sizing: border-box;
-  min-width: 491px;
+  max-width: 491px;
   max-height: 71px;
   margin-top: 563px;
   margin-right: 20px;
@@ -364,7 +364,6 @@ button {
 
   .header__subtitle {
     justify-self: end;
-    min-width: 364px;
     width: 364px;
     max-height: none;
     min-height: 117px;
