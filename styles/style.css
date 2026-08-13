@@ -364,9 +364,9 @@ button {
 
   .header__subtitle {
     justify-self: end;
-    min-width: 364px; 
+    min-width: 364px;
     width: 364px;
-    max-height: none; 
+    max-height: none;
     min-height: 117px;
     margin-top: 724px;
     margin-right: 20px;
@@ -382,7 +382,6 @@ button {
     grid-template-columns: 1fr;
     gap: 10px;
     margin-top: 171px;
-
   }
 
   .header__theme-menu {
@@ -398,10 +397,9 @@ button {
     grid-template-columns: 1fr 2fr;
   }
 
-.section__concentration__wiew {
-  min-width: 472px;
-
-}
+  .section__concentration__wiew {
+    min-width: 472px;
+  }
 
   .section__title__concentration {
     max-width: 236px;
@@ -410,7 +408,7 @@ button {
   .section__focus {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1;
+    grid-template-rows: auto;
     width: 100%;
     max-width: 768px;
   }
@@ -445,16 +443,14 @@ button {
     min-height: 1024px;
   }
 
-   .section {
+  .section {
     padding-right: 20px;
     padding-left: 20px;
   }
-
 }
 
 @media (max-width: 767px) {
   .header {
-    min-width: 0;
     min-height: 0;
     width: 100%;
     min-width: 375px;
@@ -471,10 +467,9 @@ button {
     padding-left: 10px;
   }
 
-
-   .header__theme-menu {
-     margin-right: 10px;
-   }
+  .header__theme-menu {
+    margin-right: 10px;
+  }
 
   .section {
     margin-bottom: 50px;
@@ -490,7 +485,6 @@ button {
 
   .header__subtitle {
     justify-self: stretch;
-    min-width: 0;
     width: calc(100% - 20px);
     min-width: 355px;
     min-height: 117px;
