@@ -27,6 +27,10 @@
     --text_paragraph_color: rgba(53, 52, 48, 1);
     --border_menu_color: rgba(50, 49, 45, 0.4);
   }
+
+  .rec-indicator {
+    display: none;
+  }
 }
 
 :root.theme-light .rec-indicator {

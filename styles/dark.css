@@ -12,7 +12,12 @@
   --border_menu_color: rgba(255, 0, 112, 0.4);
 }
 
-.rec-indicator {
+@media (prefers-color-scheme: dark) {
+  .rec-indicator {
+    display: block;
+  }
+}
+
+:root.theme-dark .rec-indicator {
   display: block;
-  color: #ff0070;
 }
